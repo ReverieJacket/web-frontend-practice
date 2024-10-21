@@ -1,0 +1,110 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+/* viewport is the area of the screen in which content is displayed.
+   Down Here we define how much % of the viewport size the width and 
+   height of the element will be.  */
+.main-login{
+    width: 100vw;       /*vw = viewport width */
+    height: 100vh;     /*vh = viewport heigh */
+    background: #201b2c;
+    display: flex;     /* flex makes things be displayed side by side. The default is a row.*/
+    justify-content: center;    /* justify-content will arrange content horizontally in the x axis */
+    align-items:center          /* align-items will arrange content vertically in the y axis */
+}
+
+.left-side{
+    width: 50vw;
+    height: 100vh;
+    display: flex;     
+    justify-content: center;    
+    align-items:center ;
+    flex-direction: column;
+}
+
+.left-side > h1{        /* calls all the h1 header inside the left-side class. */
+    color: #77ffc0;
+    transform: translateY(-10px);
+}
+
+.left-side-image{
+    width: 33vw;
+    transform: translateY(-65px);
+    
+}
+
+.right-side{
+    width: 50vw;
+    height: 100vh;
+    display: flex;     
+    justify-content: center;    
+    align-items:center ;
+}
+.login-card{
+    width: 50%; /* this % is not from the viewport, but from the area of the div (right-side) where login-card is.*/
+                /* why don't we define height? he didn't specify in the video.*/
+    display: flex;     
+    justify-content: center;    
+    align-items:center ;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #2f2841;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;   /* first value is the position of the shadow according to the x plane, the second reffers to the y plane, third is the blur, and forth is colour*/
+}
+
+.login-card > h1 {
+    color: #00ff88;
+    font-weight: 800;
+    margin: 0;
+}
+
+.text-field{
+    display: flex;
+    width: 100%;
+    flex-direction: column; /* when flex-direction is a column, justify-content will refer to y axis and align-items will refer to x axis*/
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;       /* first value is y axis and second is x axis*/
+}
+
+.text-field > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;  /* one value applies to both x and y axis*/
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056; 
+    outline: none;
+    box-sizing: border-box; /* child div won't surpass the parent div*/
+}
+
+.text-field > label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+
+.text-field > input::placeholder{
+    color: #f0ffff94;
+}
+
+.login-button{
+    width: 100%;
+    padding: 16px 0px;  /* first value is x axis and second os y axis */
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-weight: 800;
+    box-sizing: border-box;
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052; /* -12 is a value called spread*/
+
+}
